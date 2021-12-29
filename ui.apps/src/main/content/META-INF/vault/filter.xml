@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/ucs-exercise-renepromesse/clientlibs"/>
+    <filter root="/apps/ucs-exercise-renepromesse/components"/>
+    <filter root="/apps/ucs-exercise-renepromesse/i18n"/>
+    <filter root="/apps/ucs-exercise-renepromesse/templates"/>
+</workspaceFilter>

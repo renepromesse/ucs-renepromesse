@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Navigations Links"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <well
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                        <items jcr:primaryType="nt:unstructured">
+                            <container
+                                granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Footer Links"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <multi
+                                        granite:class=""
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Footer Navigation Links">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./footer_section_nav">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Title"
+                                                    name="./title"
+                                                    emptyText="Add Title"
+                                                    required="{Boolean}true"
+                                                    />
+                                                <defaulttypes
+                                                    required="{Boolean}true"
+                                                    granite:class="core-title-sizes-default"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Link Type"
+                                                    name="./type"
+                                                    emptyText="Select value"
+                                                    >
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <self
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="self"
+                                                            value="self"/>
+                                                        <blank
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="blank"
+                                                            value="blank"/>
+                                                    </items>
+                                                </defaulttypes>
+                                                <link
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldLabel="Path Link"
+                                                    name="./url"
+                                                    required="{Boolean}true"
+                                                    emptyText="add path"
+                                                    rootPath="/content/ucs-exercise-renepromesse"
+                                                    forceSelection="{Boolean}true"
+                                                    />
+
+                                                
+    
+                                            </items>
+                                        </field>
+                                    </multi>
+                                </items>
+                            </container>
+                        </items>
+                    </well>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

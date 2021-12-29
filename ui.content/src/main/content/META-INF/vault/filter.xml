@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/ucs-exercise-renepromesse" mode="merge"/>
+    <filter root="/content/ucs-exercise-renepromesse" mode="merge"/>
+    <filter root="/content/dam/ucs-exercise-renepromesse" mode="merge"/>
+    <filter root="/content/experience-fragments/ucs-exercise-renepromesse" mode="merge"/>
+</workspaceFilter>

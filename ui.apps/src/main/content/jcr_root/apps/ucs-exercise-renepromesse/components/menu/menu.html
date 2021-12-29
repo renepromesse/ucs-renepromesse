@@ -1,0 +1,10 @@
+<sly data-sly-use.model="it.codeland.academy.core.models.Menu" />
+
+<div class="navbar__links">
+  <sly data-sly-list.item="${model.headingIcons}">
+    <a class="navbar__link contact-us" href="#">
+        <div class="icon ${item.icon}"></div>
+        <p class="text--label">${item.label}</p>
+    </a>
+</sly>
+  </div>
