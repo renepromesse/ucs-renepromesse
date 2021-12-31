@@ -6,14 +6,13 @@
         </div>
         <div class="first-level__items">
             <div
-                    data-sly-repeat="${CurrentPage.listChildren}"
-                    data-nav-1="${item.name}"
-                    class="first-level__item ${item.name}"
-                    href="#"
-            >
+                data-sly-repeat="${CurrentPage.listChildren}"
+                data-nav-1="${item.name}"
+                class="first-level__item ${item.name}"
+                href="#">
                 <span class="item__text text--label">${item.title}</span>
                 <span class="icon icon-forth"></span>
-            </div>
+            </div> 
         </div>
         <div class="navbar__languages">
             <div class="languages__selector">
@@ -32,22 +31,20 @@
         <div class="navbar__second-level">
             <div class="navbar__second-level" data-sly-repeat="${currentPage.listChildren}">
                 <div
-                        data-sly-test.child="${item.name}"
-                        class="second-level__items ${name}"
-                        data-nav-2="${child}"
-                >
-                    <div class="container">
-                        <a
-                                data-sly-test.child="${item.title}"
-                                class="second-level__item--title text--paragraph-title"
-                                href="/content/ucs-exercise-issa/${item.name}.html"
-                        >
-                            ${child}
-                        </a>
-                        <sly data-sly-list.subpage="${item.listChildren}">
-                            <a class="second-level__item text--body" href="#">${subpage.title}</a>
-                        </sly>
-                    </div>
+                    data-sly-test.child="${item.name}"
+                    class="second-level__items ${name}"
+                    data-nav-2="${child}">
+                <div class="container">
+                    <a
+                        data-sly-test.child="${item.title}"
+                        class="second-level__item--title text--paragraph-title"
+                        href="/content/ucs-exercise-renepromesse/${item.name}.html">
+                        ${child}
+                    </a>
+                    <sly data-sly-list.subpage="${item.listChildren}">
+                        <a class="second-level__item text--body" href="#">${subpage.title}</a>
+                    </sly>
+                </div>
                 </div>
             </div>
 
