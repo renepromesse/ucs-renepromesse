@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured" jcr:title="Properties" sling:resourceType="cq/gui/components/authoring/dialog">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured" jcr:title="Menu Properties" sling:resourceType="cq/gui/components/authoring/dialog">
     <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
         <items jcr:primaryType="nt:unstructured">
             <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <well-multifield jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/well" fieldLabel="Nav Menus">
+                    <well-multifield jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/well" fieldLabel="Menu">
                         <items jcr:primaryType="nt:unstructured">
-                            <navIcons jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldDescription="Nav Dialog" fieldLabel="Nav Menus" required="{Boolean}false" name="navIcons">
-                                <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" emptyText="Nav Menu" name="./navIcons">
+                            <navIcons jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldDescription="This is a header menu: select the icon, add a label and a path" fieldLabel="Menu" required="{Boolean}false" name="navIcons">
+                                <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" emptyText="Menu" name="./navIcons">
                                     <items jcr:primaryType="nt:unstructured">
-                                        <label jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="label" name="./label" />
-                                        <dropdown jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Dropdown" name="./icon">
+                                        <label jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="label" required="{Boolean}true" emptyText="add label text" name="./label" />
+                                        <dropdown jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" required="{Boolean}true" fieldLabel="Select the icon" name="./icon">
                                             <items jcr:primaryType="nt:unstructured">
                                                 <message jcr:primaryType="nt:unstructured" text="message icon" value="icon-contattaci2" />
                                                 <calendar jcr:primaryType="nt:unstructured" text="calendar icon" value="icon-calendar" />
                                                 <globe jcr:primaryType="nt:unstructured" text="globe icon" value="icon-estero2" />
                                                 <search jcr:primaryType="nt:unstructured" text="search icon" value="icon-search" />
-                                            </items>
+                                             </items>
                                         </dropdown>
+                                        <link
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                            fieldLabel="Menu path"
+                                            name="./url"
+                                            required="{Boolean}true"
+                                            emptyText="add menu path"
+                                            rootPath="/content/ucs-exercise-renepromesse"
+                                            forceSelection="{Boolean}true"
+                                            />
                                     </items>
                                 </field>
                             </navIcons>

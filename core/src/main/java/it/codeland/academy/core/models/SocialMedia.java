@@ -18,9 +18,9 @@ import java.util.*;
 import static org.apache.sling.api.resource.ResourceResolver.PROPERTY_RESOURCE_TYPE;
 
 @Model(adaptables = Resource.class)
-public class Menu {
+public class SocialMedia {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Menu.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SocialMedia.class);
 
     @ValueMapValue(name = PROPERTY_RESOURCE_TYPE, injectionStrategy = InjectionStrategy.OPTIONAL)
     @Default(values = "No resourceType")
@@ -35,26 +35,30 @@ public class Menu {
 
     @PostConstruct
     protected void init() {
+
         PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
         String currentPagePath = Optional.ofNullable(pageManager)
                 .map(pm -> pm.getContainingPage(currentResource))
                 .map(Page::getPath).orElse("");
     }
 
-    public List<Map<String, String>> getHeadingIcons() {
+    public List<Map<String, String>> getSocialMediaIcons() {
         List<Map<String, String>> listMapNav = new ArrayList<>();
         try {
             Resource navIcons = resource.getChild("navIcons");
             if (navIcons != null) {
                 for (Resource navItem : navIcons.getChildren()) {
                     Map<String, String> mapNavItem = new HashMap<>();
-                    mapNavItem.put("label", navItem.getValueMap().get("label", String.class));
-                    mapNavItem.put("icon", navItem.getValueMap().get("icon", String.class));
+                  
+                    mapNavItem.put("socialIcon", navItem.getValueMap().get("socialIcon", String.class));
+                    mapNavItem.put("socialLink", navItem.getValueMap().get("socialLink", String.class));
+                    mapNavItem.put("socialTarget", navItem.getValueMap().get("socialTarget", String.class));
                     listMapNav.add(mapNavItem);
                 }
             }
         } catch (Exception e) {
-            LOG.info("\n Error from header menu {} ", e.getMessage());
+
+            LOG.info("\n Error from social media Items {} ", e.getMessage());
         }
         return listMapNav;
     }

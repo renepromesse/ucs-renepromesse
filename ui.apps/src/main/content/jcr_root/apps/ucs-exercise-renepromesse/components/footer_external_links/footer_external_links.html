@@ -1,0 +1,9 @@
+<div>
+  
+  <div class="footer__utils"  data-sly-use.model="it.codeland.academy.core.models.Footer_external_links">
+    <div data-sly-list.item="${model.getLinks}">
+      <a href="${item.url}" target="${item.type}">${item.title}</a>
+    </div>
+  </div>
+
+</div>

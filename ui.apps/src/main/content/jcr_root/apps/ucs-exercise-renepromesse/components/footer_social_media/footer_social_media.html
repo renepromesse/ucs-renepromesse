@@ -1,11 +1,10 @@
+
+<sly data-sly-use.model="it.codeland.academy.core.models.SocialMedia" />
+
 <div class="footer__socials">
-  <a href="#">
-    <span class="icon-twitter"></span>
-  </a>
-  <a href="#">
-    <span class="icon-linkedin"></span>
-  </a>
-  <a href="#">
-    <span class="icon-youtube"></span>
-  </a>
+  <sly data-sly-list.item="${model.getSocialMediaIcons}">
+    <a href="${item.socialLink}" target="${item.socialTarget}">
+      <span class="${item.socialIcon}"></span>
+    </a>
+  </sly>
 </div>

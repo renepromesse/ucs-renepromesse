@@ -1,3 +1,7 @@
+
 <a class="navbar__logo" href="${properties.linkLogo}">
-    <img src="https://www.unicreditgroup.eu/etc/designs/unicreditgroupn/img/static/logoHiRes.png" alt="unicredit-logo" />
+    <span data-sly-test="${!properties.image}">Edit to add logo</span>
+    <sly data-sly-test="${properties.image}">
+        <img src="${properties.image}" alt="unicredit-logo" />
+    </sly> 
 </a>
