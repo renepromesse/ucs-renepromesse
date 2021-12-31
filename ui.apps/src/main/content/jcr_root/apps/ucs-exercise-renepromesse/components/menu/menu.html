@@ -1,5 +1,5 @@
 <sly data-sly-use.model="it.codeland.academy.core.models.Menu" />
-
+<div data-sly-test="${!model.headingIcons}">Edit to add Menus</div>
 <div class="navbar__links">
   <sly data-sly-list.item="${model.headingIcons}">
     <a class="navbar__link contact-us" href="#">
