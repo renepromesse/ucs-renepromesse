@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
+    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+        <sly data-sly-call="${clientlib.css @ categories='ucs-exercise-renepromesse.head'}" />
+    </sly>  
 </head>
 <body>
     <div class="header">
         <sly id="mainHeader" data-sly-resource="${'mainHeader' @ resourceType='ucs-exercise-renepromesse/components/header'}">
     </div>
     <div>
-        <sly id="unicreditCarousel" data-sly-resource="${'unicreditCarousel' @ resourceType='ucs-exercise-renepromesse/components/unicredit-carousel'}"></sly>
+        <main class="main-content welcome-page ucg-icons__newPackage">
+            <sly id="homeContent" data-sly-resource="${'homeContent' @ resourceType='ucs-exercise-renepromesse/components/home-content'}"></sly>
+        </main>
     </div>
-    
+
+
     <div>
         <sly data-sly-resource="${@path='parsys', resourceType='wcm/foundation/components/parsys'}"></sly>
     </div>
