@@ -8,18 +8,14 @@
 </head>
 <body>
     <div class="header">
-        <sly id="mainHeader" data-sly-resource="${'mainHeader' @ resourceType='ucs-exercise-renepromesse/components/header'}">
+        <sly id="mainHeader" data-sly-resource="${'/content/ucs-exercise-renepromesse/us/en/uni-credit/jcr:content/mainHeader' @ resourceType='ucs-exercise-renepromesse/components/header'}">
     </div>
-    <div>
-        <sly id="unicreditCarousel" data-sly-resource="${'unicreditCarousel' @ resourceType='ucs-exercise-renepromesse/components/unicredit-carousel'}"></sly>
-    </div>
-    
     <div>
         <sly data-sly-resource="${@path='parsys', resourceType='wcm/foundation/components/parsys'}"></sly>
     </div>
     
     <div class="footer">
-        <sly id="mainFooter" data-sly-resource="${'mainFooter' @ resourceType='ucs-exercise-renepromesse/components/footer'}">
+        <sly id="mainFooter" data-sly-resource="${'/content/ucs-exercise-renepromesse/us/en/uni-credit/jcr:content/mainFooter' @ resourceType='ucs-exercise-renepromesse/components/footer'}">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">

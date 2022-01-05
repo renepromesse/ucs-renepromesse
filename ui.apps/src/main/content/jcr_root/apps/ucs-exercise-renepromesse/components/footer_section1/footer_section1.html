@@ -1,5 +1,5 @@
 <sly data-sly-use.model="it.codeland.academy.core.models.Footer_section1" />
-<div data-sly-test="${!model.links}">Edit to add footer items</div>
+<div data-sly-test="${!model.links}" style="text-align:center;color:grey">Edit to add footer items</div>
 <div class="footer__mainLink">
   <div data-sly-list.item="${model.links}">
     <a href="${item.url}.html" class="footer__link">${item.title}</a>

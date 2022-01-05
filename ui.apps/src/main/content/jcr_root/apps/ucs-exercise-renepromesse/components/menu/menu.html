@@ -2,7 +2,7 @@
 <div data-sly-test="${!model.headingIcons}">Edit to add Menus</div>
 <div class="navbar__links">
   <sly data-sly-list.item="${model.headingIcons}">
-    <a class="navbar__link contact-us" href="#">
+    <a class="navbar__link contact-us" href="${item.url}.html">
         <div class="icon ${item.icon}"></div>
         <p class="text--label">${item.label}</p>
     </a>
