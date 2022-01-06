@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-        <sly data-sly-call="${clientlib.css @ categories='ucs-exercise-renepromesse.head'}" />
+        <sly data-sly-call="${clientlib.css @ categories='ucs-exercise-renepromesse.base'}" />
     </sly>  
 </head>
 <body>
@@ -27,13 +27,9 @@
     <div class="footer">
         <sly id="mainFooter" data-sly-resource="${'mainFooter' @ resourceType='ucs-exercise-renepromesse/components/footer'}">
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-        <sly data-sly-call="${clientlib.js @ categories='ucs-exercise-renepromesse.head'}" />
-    </sly>  
-    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-        <sly data-sly-call="${clientlib.js @ categories='ucs-exercise-renepromesse.old'}" />
-    </sly>  
+        <sly data-sly-call="${clientlib.all @ categories='ucs-exercise-renepromesse.base'}" />
+    </sly> 
 </body>
 </html>
 
