@@ -6,21 +6,31 @@
         class="heroBanner__wrapper swiper-wrapper"
         data-sly-use.slider="it.codeland.academy.core.models.SliderModel"
       >
+      <!-- <sly data-sly-use.model="it.codeland.academy.core.models.Footer_section1" />
+      <div data-sly-test="${!model.links}" style="text-align:center;color:grey">Edit to add footer items</div>
+      <div class="footer__mainLink">
+        <div data-sly-list.item="${model.links}">
+          <a href="${item.url}.html" class="footer__link">${item.title}</a>
+        </div>
+      </div> -->
+
         <p
-          data-sly-test="${wcmmode.edit && !slider.slides}"
+          data-sly-test="${wcmmode.edit && !slider.currentData}"
           style="
             text-align: center;
             font-weight: bold;
-            font-size: 40px;
-            color: rgb(32, 172, 190);
+            font-size: 20px;
+            color: black;
             margin: auto;
+            padding: 29px;
+            border: 1px solid black;
           "
         >
-          [Configure Carousel]
+          Edit the slider
         </p>
 
         <!-- Type 1 -->
-        <sly data-sly-repeat="${slider.slides}">
+        <sly data-sly-list.item="${slider.currentData}">
           <sly
             data-sly-test="${item.slideType == 'welcome-slide' || item.slideType == 'welcome-slide-2' || item.slideType == 'welcome-slide-3' || item.slideType == 'welcome-slide-4' || item.slideType == 'welcome-slide-5'}"
           >
@@ -75,6 +85,7 @@
             data-sly-test="${item.slideType == 'article-slide' || item.slideType == 'article-slide-2' || item.slideType == 'article-slide-3' || item.slideType == 'article-slide-4' || item.slideType == 'article-slide-5'}"
           >
             <div
+              data-sly-test="${item.imageDesktopPath || item.imageMobilePath}"
               class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
               data-bg="${item.imageDesktopPath}"
               data-bg-mobile="${item.imageMobilePath}"
@@ -152,6 +163,7 @@
             data-sly-test="${item.slideType == 'get-involved-slide' || item.slideType == 'get-involved-slide-2' || item.slideType == 'get-involved-slide-3' || item.slideType == 'get-involved-slide-4' || item.slideType == 'get-involved-slide-5' }"
           >
             <div
+              data-sly-test="${item.imageDesktopPath || item.imageMobilePath}"
               class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
               data-bg="${item.imageDesktopPath}"
               data-bg-mobile="${item.imageMobilePath}"
@@ -223,7 +235,7 @@
     <sly
       data-sly-use.sliderPopup="it.codeland.academy.core.models.SliderModel"
     >
-      <sly data-sly-repeat="${sliderPopup.slides}">
+      <sly data-sly-list.item="${sliderPopup.currentData}">
         <sly
           data-sly-test="${item.slideType == 'get-involved-slide' || item.slideType == 'get-involved-slide-2' || item.slideType == 'get-involved-slide-3' || item.slideType == 'get-involved-slide-4' || item.slideType == 'get-involved-slide-5' }"
         >

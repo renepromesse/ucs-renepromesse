@@ -20,6 +20,7 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 public class SliderModel {
     private final List<Resource> slides = new ArrayList<>();
     private final List<Resource> orderedSlides = new ArrayList<>();
+    private Iterator<Resource> currentData;
 
     @SlingObject
     private Resource currentResource;
@@ -32,53 +33,57 @@ public class SliderModel {
     protected void init() throws PersistenceException {
        
         Iterator<Resource> children = currentResource.listChildren();
-        if (children == null) {
-           return;
-        }
+        currentData = children;
+        // if (children == null) {
+        //    return;
+        // }
        
-       Resource currentChild;
-	   	while (children.hasNext()) {
-            currentChild = children.next();
-			slides.add(currentChild);
-	   	}
+    //    Resource currentChild;
+	//    	while (children.hasNext()) {
+    //         currentChild = children.next();
+	// 		slides.add(currentChild);
+	//    	}
                 
-        if(slideOrder != null){
-            for(String slideName : slideOrder){
-                Resource activeSlide = slides.stream().filter(item-> {
-                if (item.getName().equals(slideName)) {
-                    return true;
-                }return false;
-                }).findAny().orElse(null);
+        // if(slideOrder != null){
+        //     for(String slideName : slideOrder){
+        //         Resource activeSlide = slides.stream().filter(item-> {
+        //         if (item.getName().equals(slideName)) {
+        //             return true;
+        //         }return false;
+        //         }).findAny().orElse(null);
                  
-                if(activeSlide != null){ 
-                    orderedSlides.add(activeSlide);
-                 }
-             }
-        } 
+        //         if(activeSlide != null){ 
+        //             orderedSlides.add(activeSlide);
+        //          }
+        //      }
+        // } 
 
-        for(Resource sld : orderedSlides){
-            ValueMap adaptedSld = sld.adaptTo(ValueMap.class);
-            String[] originalTags = adaptedSld.get("tags", String[].class);
-            List<String> tags = new ArrayList<>();
+        // for(Resource sld : orderedSlides){
+        //     ValueMap adaptedSld = sld.adaptTo(ValueMap.class);
+        //     String[] originalTags = adaptedSld.get("tags", String[].class);
+        //     List<String> tags = new ArrayList<>();
            
-            if(originalTags != null){
-                for(String tag :  originalTags){
-                     if(tag.contains("/")){
-                        tags.add(tag.substring(tag.lastIndexOf("/") + 1));
-                    } 
-                    else tags.add(tag.substring(tag.lastIndexOf(":") + 1));
-                }
-                try {
-                    ModifiableValueMap map = sld.adaptTo(ModifiableValueMap.class);
-                    String[] tagsArr = Iterables.toArray(tags, String.class);
-                    map.put("tags", tagsArr);
-                    // sld.getResourceResolver().commit();
-                } catch (Exception e) {}
-           }
-        }
+        //     if(originalTags != null){
+        //         for(String tag :  originalTags){
+        //              if(tag.contains("/")){
+        //                 tags.add(tag.substring(tag.lastIndexOf("/") + 1));
+        //             } 
+        //             else tags.add(tag.substring(tag.lastIndexOf(":") + 1));
+        //         }
+        //         try {
+        //             ModifiableValueMap map = sld.adaptTo(ModifiableValueMap.class);
+        //             String[] tagsArr = Iterables.toArray(tags, String.class);
+        //             map.put("tags", tagsArr);
+        //             // sld.getResourceResolver().commit();
+        //         } catch (Exception e) {}
+        //    }
+        // }
     }
 
     public List<Resource> getSlides(){
         return orderedSlides;
+    }
+    public Iterator<Resource> getCurrentData(){
+        return currentData;
     }
 }

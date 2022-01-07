@@ -43,9 +43,9 @@
                             </logo>
                             <slideType granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide1/slideType">
                                 <items jcr:primaryType="nt:unstructured">
-                                    <welcomeSlide jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide"/>
-                                    <articleSlide jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide"/>
-                                    <getInvolvedSlide jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide"/>
+                                    <welcomeSlide jcr:primaryType="nt:unstructured" text="Welcome" value="welcome-slide"/>
+                                    <articleSlide jcr:primaryType="nt:unstructured" text="Article" value="article-slide"/>
+                                    <getInvolvedSlide jcr:primaryType="nt:unstructured" text="Get Involved" value="get-involved-slide"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-1"/>
                             </slideType>
@@ -84,13 +84,16 @@
                                     <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide1/titleArticle"/>
                                     <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide1/category">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
-                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
-                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Our People" value="Our People"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Our Team" value="Our Team"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Our Commitment" value="Our Commitment"/>
+                                            <cat4 jcr:primaryType="nt:unstructured" text="Our Vision" value="Our Vision"/>
+                                            <cat5 jcr:primaryType="nt:unstructured" text="Our Mission" value="Our Mission"/>
+                                            <cat6 jcr:primaryType="nt:unstructured" text="Our Values" value="Our Values"/>
                                         </items>
                                     </category>
                                     <tagsSlide1 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide1/tags" rootPath="/content/cq:tags/ucs-exercise-renepromesse" />
-                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide1/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide1/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide1/abstractArticle"/>
                                     <callToAction sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide1/callToAction" />
                                     <callToActionLink sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide1/callToActionLink" rootPath="/content/ucs-renepromesse" />
@@ -185,9 +188,9 @@
                             </logo>
                             <slideType2 granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide2/slideType">
                                 <items jcr:primaryType="nt:unstructured">
-                                    <welcomeSlide2 jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide-2"/>
-                                    <articleSlide2 jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide-2"/>
-                                    <getInvolvedSlide2 jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide-2"/>
+                                    <welcomeSlide2 jcr:primaryType="nt:unstructured" text="Welcome" value="welcome-slide-2"/>
+                                    <articleSlide2 jcr:primaryType="nt:unstructured" text="Article" value="article-slide-2"/>
+                                    <getInvolvedSlide2 jcr:primaryType="nt:unstructured" text="Get Involved" value="get-involved-slide-2"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-2"/>
                             </slideType2>
@@ -226,13 +229,19 @@
                                     <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide2/titleArticle"/>
                                     <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide2/category">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
-                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
-                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Our People" value="Our People"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Our Team" value="Our Team"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Our Commitment" value="Our Commitment"/>
+                                            <cat4 jcr:primaryType="nt:unstructured" text="Our Vision" value="Our Vision"/>
+                                            <cat5 jcr:primaryType="nt:unstructured" text="Our Mission" value="Our Mission"/>
+                                            <cat6 jcr:primaryType="nt:unstructured" text="Our Values" value="Our Values"/>
+
+                                            
+                                            
                                         </items>
                                     </category>
                                     <tagsSlide2 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide2/tags" rootPath="/content/cq:tags/ucs-exercise-renepromesse" />
-                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide2/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide2/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide2/abstractArticle"/>
                                     <callToAction2 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide2/callToAction" />
                                     <callToActionLink2 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide2/callToActionLink" rootPath="/content/ucs-renepromesse" />
@@ -326,9 +335,9 @@
                             </logo>
                             <slideType3 granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide3/slideType">
                                 <items jcr:primaryType="nt:unstructured">
-                                    <welcomeSlide3 jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide-3"/>
-                                    <articleSlide3 jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide-3"/>
-                                    <getInvolvedSlide3 jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide-3"/>
+                                    <welcomeSlide3 jcr:primaryType="nt:unstructured" text="Welcome" value="welcome-slide-3"/>
+                                    <articleSlide3 jcr:primaryType="nt:unstructured" text="Article" value="article-slide-3"/>
+                                    <getInvolvedSlide3 jcr:primaryType="nt:unstructured" text="Get Involved" value="get-involved-slide-3"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-3"/>
                             </slideType3>
@@ -367,13 +376,19 @@
                                     <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide3/titleArticle"/>
                                     <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide3/category">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
-                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
-                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Our People" value="Our People"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Our Team" value="Our Team"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Our Commitment" value="Our Commitment"/>
+                                            <cat4 jcr:primaryType="nt:unstructured" text="Our Vision" value="Our Vision"/>
+                                            <cat5 jcr:primaryType="nt:unstructured" text="Our Mission" value="Our Mission"/>
+                                            <cat6 jcr:primaryType="nt:unstructured" text="Our Values" value="Our Values"/>
+
+                                            
+                                            
                                         </items>
                                     </category>
                                     <tagsSlide3 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide3/tags" rootPath="/content/cq:tags/ucs-exercise-renepromesse" />
-                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide3/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide3/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide3/abstractArticle"/>
                                     <callToAction3 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide3/callToAction" />
                                     <callToActionLink3 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide3/callToActionLink" rootPath="/content/ucs-renepromesse" />
@@ -468,9 +483,9 @@
                             </logo>
                             <slideType4 granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide4/slideType">
                                 <items jcr:primaryType="nt:unstructured">
-                                    <welcomeSlide4 jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide-4"/>
-                                    <articleSlide4 jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide-4"/>
-                                    <getInvolvedSlide4 jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide-4"/>
+                                    <welcomeSlide4 jcr:primaryType="nt:unstructured" text="Welcome" value="welcome-slide-4"/>
+                                    <articleSlide4 jcr:primaryType="nt:unstructured" text="Article" value="article-slide-4"/>
+                                    <getInvolvedSlide4 jcr:primaryType="nt:unstructured" text="Get Involved" value="get-involved-slide-4"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-4"/>
                             </slideType4>
@@ -509,13 +524,19 @@
                                     <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide4/titleArticle"/>
                                     <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide4/category">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
-                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
-                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Our People" value="Our People"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Our Team" value="Our Team"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Our Commitment" value="Our Commitment"/>
+                                            <cat4 jcr:primaryType="nt:unstructured" text="Our Vision" value="Our Vision"/>
+                                            <cat5 jcr:primaryType="nt:unstructured" text="Our Mission" value="Our Mission"/>
+                                            <cat6 jcr:primaryType="nt:unstructured" text="Our Values" value="Our Values"/>
+
+                                            
+                                            
                                         </items>
                                     </category>
                                     <tagsSlide4 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide4/tags" rootPath="/content/cq:tags/ucs-exercise-renepromesse" />
-                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide4/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide4/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide4/abstractArticle"/>
                                     <callToAction4 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide4/callToAction" />
                                     <callToActionLink4 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide4/callToActionLink" rootPath="/content/ucs-renepromesse" />
@@ -610,9 +631,9 @@
                             </logo>
                             <slideType5 granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide5/slideType">
                                 <items jcr:primaryType="nt:unstructured">
-                                    <welcomeSlide5 jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide-5"/>
-                                    <articleSlide5 jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide-5"/>
-                                    <getInvolvedSlide5 jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide-5"/>
+                                    <welcomeSlide5 jcr:primaryType="nt:unstructured" text="Welcome" value="welcome-slide-5"/>
+                                    <articleSlide5 jcr:primaryType="nt:unstructured" text="Article" value="article-slide-5"/>
+                                    <getInvolvedSlide5 jcr:primaryType="nt:unstructured" text="Get Involved" value="get-involved-slide-5"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-5"/>
                             </slideType5>
@@ -651,13 +672,19 @@
                                     <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide5/titleArticle"/>
                                     <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide5/category">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
-                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
-                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Our People" value="Our People"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Our Team" value="Our Team"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Our Commitment" value="Our Commitment"/>
+                                            <cat4 jcr:primaryType="nt:unstructured" text="Our Vision" value="Our Vision"/>
+                                            <cat5 jcr:primaryType="nt:unstructured" text="Our Mission" value="Our Mission"/>
+                                            <cat6 jcr:primaryType="nt:unstructured" text="Our Values" value="Our Values"/>
+
+                                            
+                                            
                                         </items>
                                     </category>
                                     <tagsSlide5 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide5/tags" rootPath="/content/cq:tags/ucs-exercise-renepromesse" />
-                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide5/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide5/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide5/abstractArticle"/>
                                     <callToAction5 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide5/callToAction" />
                                     <callToActionLink5 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide5/callToActionLink" rootPath="/content/ucs-renepromesse" />
