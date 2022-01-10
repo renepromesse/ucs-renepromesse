@@ -15,7 +15,7 @@
       </div> -->
 
         <p
-          data-sly-test="${wcmmode.edit && !slider.currentData}"
+          data-sly-test="${wcmmode.edit && !slider.slidesOrder}"
           style="
             text-align: center;
             font-weight: bold;
@@ -30,7 +30,7 @@
         </p>
 
         <!-- Type 1 -->
-        <sly data-sly-list.item="${slider.currentData}">
+        <sly data-sly-list.item="${slider.slidesOrder}">
           <sly
             data-sly-test="${item.slideType == 'welcome-slide' || item.slideType == 'welcome-slide-2' || item.slideType == 'welcome-slide-3' || item.slideType == 'welcome-slide-4' || item.slideType == 'welcome-slide-5'}"
           >
@@ -235,7 +235,7 @@
     <sly
       data-sly-use.sliderPopup="it.codeland.academy.core.models.SliderModel"
     >
-      <sly data-sly-list.item="${sliderPopup.currentData}">
+      <sly data-sly-list.item="${sliderPopup.slidesOrder}">
         <sly
           data-sly-test="${item.slideType == 'get-involved-slide' || item.slideType == 'get-involved-slide-2' || item.slideType == 'get-involved-slide-3' || item.slideType == 'get-involved-slide-4' || item.slideType == 'get-involved-slide-5' }"
         >

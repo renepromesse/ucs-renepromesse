@@ -7,20 +7,12 @@
     <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
         <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/tabs" type="nav"/>
         <items jcr:primaryType="nt:unstructured">
-            <general jcr:primaryType="nt:unstructured" jcr:title="General" sling:resourceType="granite/ui/components/foundation/section">
+           <general jcr:primaryType="nt:unstructured" jcr:title="General" sling:resourceType="granite/ui/components/foundation/section">
                 <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false" />
                 <items jcr:primaryType="nt:unstructured">
                     <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
-                            <slideOrder jcr:primaryType="nt:unstructured" sling:resourceType="ucs-exercise-renepromesse/components/content/slider/orderedList" name="./slideOrder" title="Slide Order">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <slide1 jcr:primaryType="nt:unstructured" text="Slide 1" value="slide1" />
-                                    <slide2 jcr:primaryType="nt:unstructured" text="Slide 2" value="slide2" />
-                                    <slide3 jcr:primaryType="nt:unstructured" text="Slide 3" value="slide3" />
-                                    <slide4 jcr:primaryType="nt:unstructured" text="Slide 4" value="slide4" />
-                                    <slide5 jcr:primaryType="nt:unstructured" text="Slide 5" value="slide5" />
-                                </items>
-                            </slideOrder>
+                            <slideOrder jcr:primaryType="nt:unstructured" sling:resourceType="/apps/ucs-exercise-renepromesse/components/home-slider-test/orderedList/orderedList.html" name="./slideOrder" title="Slide Order"/>
                         </items>
                     </column>
                 </items>
@@ -30,11 +22,11 @@
                 <items jcr:primaryType="nt:unstructured">
                     <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
-
-                            <imageDesktop1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide1/imageDesktopName" fileReferenceParameter="./slide1/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altDesktop1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide1/imageAlt"/>
-                            <imageMobile1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide1/imageMobileName" fileReferenceParameter="./slide1/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altMobile1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide1/imageMobileAlt"/>
+                            
+                            <imageDesktop1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Desktop Image" fileNameParameter="./slide1/imageDesktopName" fileReferenceParameter="./slide1/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide1/imageAlt"/>
+                            <imageMobile1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Mobile Image" fileNameParameter="./slide1/imageMobileName" fileReferenceParameter="./slide1/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide1/imageMobileAlt"/>
                             <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide1/logo">
                                 <items jcr:primaryType="nt:unstructured">
                                     <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
@@ -96,7 +88,7 @@
                                     <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide1/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide1/abstractArticle"/>
                                     <callToAction sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide1/callToAction" />
-                                    <callToActionLink sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide1/callToActionLink" rootPath="/content/ucs-renepromesse" />
+                                    <callToActionLink sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide1/callToActionLink" rootPath="/content/ucs-exercise-renepromesse" />
                                     <callToActionTargetOpening jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide1/callToActionTargetOpening">
                                         <items jcr:primaryType="nt:unstructured">
                                             <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
@@ -160,9 +152,9 @@
                                         </uiSettings>
                                     </overlayDescription>
                                     <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide1/imageOverlayName" fileReferenceParameter="./slide1/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide1/overlayImageAlt"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide1/overlayImageAlt"/>
                                     <overlayImgMobile1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide1/imageMobileOverlayName" fileReferenceParameter="./slide1/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altMobileOverlay1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide1/overlayImageMobileAlt"/>
+                                    <altMobileOverlay1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide1/overlayImageMobileAlt"/>
 
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide"/>
@@ -176,10 +168,10 @@
                 <items jcr:primaryType="nt:unstructured">
                     <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
-                            <imageDesktop2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide2/imageDesktopName" fileReferenceParameter="./slide2/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altDesktop2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide2/imageAlt"/>
-                            <imageMobile2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide2/imageMobileName" fileReferenceParameter="./slide2/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altMobile2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide2/imageMobileAlt"/>
+                            <imageDesktop2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Desktop Image" fileNameParameter="./slide2/imageDesktopName" fileReferenceParameter="./slide2/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide2/imageAlt"/>
+                            <imageMobile2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Mobile Image" fileNameParameter="./slide2/imageMobileName" fileReferenceParameter="./slide2/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide2/imageMobileAlt"/>
                             <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide2/logo">
                                 <items jcr:primaryType="nt:unstructured">
                                     <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
@@ -244,7 +236,7 @@
                                     <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide2/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide2/abstractArticle"/>
                                     <callToAction2 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide2/callToAction" />
-                                    <callToActionLink2 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide2/callToActionLink" rootPath="/content/ucs-renepromesse" />
+                                    <callToActionLink2 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide2/callToActionLink" rootPath="/content/ucs-exercise-renepromesse" />
                                     <callToActionTargetOpening2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide2/callToActionTargetOpening">
                                         <items jcr:primaryType="nt:unstructured">
                                             <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
@@ -307,9 +299,9 @@
                                         </uiSettings>
                                     </overlayDescription>
                                     <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide2/imageOverlayName" fileReferenceParameter="./slide2/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide2/overlayImageAlt"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide2/overlayImageAlt"/>
                                     <overlayImgMobile2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide2/imageMobileOverlayName" fileReferenceParameter="./slide2/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altMobileOverlay2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide2/overlayImageMobileAlt"/>
+                                    <altMobileOverlay2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide2/overlayImageMobileAlt"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide-2"/>
                             </getInvolvedSlide2>
@@ -323,10 +315,10 @@
                     <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
 
-                            <imageDesktop3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide3/imageDesktopName" fileReferenceParameter="./slide3/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altDesktop3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide3/imageAlt"/>
-                            <imageMobile3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide3/imageMobileName" fileReferenceParameter="./slide3/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altMobile3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide3/imageMobileAlt"/>
+                            <imageDesktop3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Desktop Image" fileNameParameter="./slide3/imageDesktopName" fileReferenceParameter="./slide3/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide3/imageAlt"/>
+                            <imageMobile3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Mobile Image" fileNameParameter="./slide3/imageMobileName" fileReferenceParameter="./slide3/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide3/imageMobileAlt"/>
                             <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide3/logo">
                                 <items jcr:primaryType="nt:unstructured">
                                     <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
@@ -391,7 +383,7 @@
                                     <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide3/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide3/abstractArticle"/>
                                     <callToAction3 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide3/callToAction" />
-                                    <callToActionLink3 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide3/callToActionLink" rootPath="/content/ucs-renepromesse" />
+                                    <callToActionLink3 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide3/callToActionLink" rootPath="/content/ucs-exercise-renepromesse" />
                                     <callToActionTargetOpening3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide3/callToActionTargetOpening">
                                         <items jcr:primaryType="nt:unstructured">
                                             <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
@@ -454,9 +446,9 @@
                                         </uiSettings>
                                     </overlayDescription>
                                     <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide3/imageOverlayName" fileReferenceParameter="./slide3/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide3/overlayImageAlt"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide3/overlayImageAlt"/>
                                     <overlayImgMobile3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide3/imageMobileOverlayName" fileReferenceParameter="./slide3/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altMobileOverlay3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide3/overlayImageMobileAlt"/>
+                                    <altMobileOverlay3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide3/overlayImageMobileAlt"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide-3"/>
                             </getInvolvedSlide3>
@@ -471,10 +463,10 @@
                     <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
 
-                            <imageDesktop4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide4/imageDesktopName" fileReferenceParameter="./slide4/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altDesktop4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide4/imageAlt"/>
-                            <imageMobile4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide4/imageMobileName" fileReferenceParameter="./slide4/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altMobile4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide4/imageMobileAlt"/>
+                            <imageDesktop4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Desktop Image" fileNameParameter="./slide4/imageDesktopName" fileReferenceParameter="./slide4/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide4/imageAlt"/>
+                            <imageMobile4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Mobile Image" fileNameParameter="./slide4/imageMobileName" fileReferenceParameter="./slide4/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide4/imageMobileAlt"/>
                             <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide4/logo">
                                 <items jcr:primaryType="nt:unstructured">
                                     <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
@@ -539,7 +531,7 @@
                                     <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide4/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide4/abstractArticle"/>
                                     <callToAction4 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide4/callToAction" />
-                                    <callToActionLink4 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide4/callToActionLink" rootPath="/content/ucs-renepromesse" />
+                                    <callToActionLink4 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide4/callToActionLink" rootPath="/content/ucs-exercise-renepromesse" />
                                     <callToActionTargetOpening4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide4/callToActionTargetOpening">
                                         <items jcr:primaryType="nt:unstructured">
                                             <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
@@ -602,9 +594,9 @@
                                         </uiSettings>
                                     </overlayDescription>
                                     <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide4/imageOverlayName" fileReferenceParameter="./slide4/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide4/overlayImageAlt"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide4/overlayImageAlt"/>
                                     <overlayImgMobile4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide4/imageMobileOverlayName" fileReferenceParameter="./slide4/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altMobileOverlay4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide4/overlayImageMobileAlt"/>
+                                    <altMobileOverlay4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide4/overlayImageMobileAlt"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide-4"/>
                             </getInvolvedSlide4>
@@ -619,10 +611,10 @@
                     <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
 
-                            <imageDesktop5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide5/imageDesktopName" fileReferenceParameter="./slide5/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altDesktop5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide5/imageAlt"/>
-                            <imageMobile5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide5/imageMobileName" fileReferenceParameter="./slide5/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
-                            <altMobile5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide5/imageMobileAlt"/>
+                            <imageDesktop5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Desktop Image" fileNameParameter="./slide5/imageDesktopName" fileReferenceParameter="./slide5/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide5/imageAlt"/>
+                            <imageMobile5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Mobile Image" fileNameParameter="./slide5/imageMobileName" fileReferenceParameter="./slide5/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide5/imageMobileAlt"/>
                             <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide5/logo">
                                 <items jcr:primaryType="nt:unstructured">
                                     <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
@@ -687,7 +679,7 @@
                                     <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide5/date" required="{Boolean}false" displayedFormat="dddd DD MMMM YYYY" value="2022-01-01"/>
                                     <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide5/abstractArticle"/>
                                     <callToAction5 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide5/callToAction" />
-                                    <callToActionLink5 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide5/callToActionLink" rootPath="/content/ucs-renepromesse" />
+                                    <callToActionLink5 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide5/callToActionLink" rootPath="/content/ucs-exercise-renepromesse" />
                                     <callToActionTargetOpening5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide5/callToActionTargetOpening">
                                         <items jcr:primaryType="nt:unstructured">
                                             <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
@@ -750,9 +742,9 @@
                                         </uiSettings>
                                     </overlayDescription>
                                     <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide5/imageOverlayName" fileReferenceParameter="./slide5/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide5/overlayImageAlt"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide5/overlayImageAlt"/>
                                     <overlayImgMobile5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide5/imageMobileOverlayName" fileReferenceParameter="./slide5/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
-                                    <altMobileOverlay5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide5/overlayImageMobileAlt"/>
+                                    <altMobileOverlay5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alternative text" name="./slide5/overlayImageMobileAlt"/>
                                 </items>
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide-5"/>
                             </getInvolvedSlide5>
