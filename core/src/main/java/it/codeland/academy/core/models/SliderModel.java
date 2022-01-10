@@ -34,53 +34,25 @@ public class SliderModel {
        
         Iterator<Resource> children = currentResource.listChildren();
         currentData = children;
-        // if (children == null) {
-        //    return;
-        // }
+        while (children.hasNext()) {
+            Resource child = children.next();
+            slides.add(child);
+        }
+        if (slideOrder != null) {
+            for (String slide : slideOrder) {
+                for (Resource resource : slides) {
+                    if (resource.getName().equals(slide)) {
+                        orderedSlides.add(resource);
+                    }
+                }
+            }
+        } else {
+            orderedSlides.addAll(slides);
+        }
+        
        
-    //    Resource currentChild;
-	//    	while (children.hasNext()) {
-    //         currentChild = children.next();
-	// 		slides.add(currentChild);
-	//    	}
-                
-        // if(slideOrder != null){
-        //     for(String slideName : slideOrder){
-        //         Resource activeSlide = slides.stream().filter(item-> {
-        //         if (item.getName().equals(slideName)) {
-        //             return true;
-        //         }return false;
-        //         }).findAny().orElse(null);
-                 
-        //         if(activeSlide != null){ 
-        //             orderedSlides.add(activeSlide);
-        //          }
-        //      }
-        // } 
-
-        // for(Resource sld : orderedSlides){
-        //     ValueMap adaptedSld = sld.adaptTo(ValueMap.class);
-        //     String[] originalTags = adaptedSld.get("tags", String[].class);
-        //     List<String> tags = new ArrayList<>();
-           
-        //     if(originalTags != null){
-        //         for(String tag :  originalTags){
-        //              if(tag.contains("/")){
-        //                 tags.add(tag.substring(tag.lastIndexOf("/") + 1));
-        //             } 
-        //             else tags.add(tag.substring(tag.lastIndexOf(":") + 1));
-        //         }
-        //         try {
-        //             ModifiableValueMap map = sld.adaptTo(ModifiableValueMap.class);
-        //             String[] tagsArr = Iterables.toArray(tags, String.class);
-        //             map.put("tags", tagsArr);
-        //             // sld.getResourceResolver().commit();
-        //         } catch (Exception e) {}
-        //    }
-        // }
     }
-
-    public List<Resource> getSlides(){
+    public List<Resource> getSlidesOrder(){
         return orderedSlides;
     }
     public Iterator<Resource> getCurrentData(){

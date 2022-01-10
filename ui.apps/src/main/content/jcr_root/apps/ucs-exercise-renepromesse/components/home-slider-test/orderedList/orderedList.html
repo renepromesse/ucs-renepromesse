@@ -1,0 +1,64 @@
+<sly data-sly-use.infos='${"it.codeland.academy.core.models.SliderData" @href=request.requestURI}'/>
+<div >
+
+  <table is="coral-table" orderable id="slides">
+    <colgroup>
+      <col is="coral-table-column">
+      <col is="coral-table-column" fixedwidth>
+    </colgroup>
+    <thead is="coral-table-head">
+      <tr is="coral-table-row">
+        <th is="coral-table-headercell"></th>
+        <th is="coral-table-headercell"></th>
+      </tr>
+    </thead>
+    <tbody is="coral-table-body">
+
+        <tr is="coral-table-row">
+          <td is="coral-table-cell">
+           Slide 1
+            <input type="hidden" name="./slideOrder" value="slide1"/>
+          </td>
+          <td is="coral-table-cell">
+            <button is="coral-button" type="button" variant="minimal" icon="dragHandle" coral-table-roworder></button>
+          </td>
+        </tr>
+        <tr is="coral-table-row">
+          <td is="coral-table-cell">
+           Slide 2
+            <input type="hidden" name="./slideOrder" value="slide2"/>
+          </td>
+          <td is="coral-table-cell">
+            <button is="coral-button" type="button" variant="minimal" icon="dragHandle" coral-table-roworder></button>
+          </td>
+        </tr>
+        <tr is="coral-table-row">
+          <td is="coral-table-cell">
+           Slide 3
+            <input type="hidden" name="./slideOrder" value="slide3"/>
+          </td>
+          <td is="coral-table-cell">
+            <button is="coral-button" type="button" variant="minimal" icon="dragHandle" coral-table-roworder></button>
+          </td>
+        </tr>
+        <tr is="coral-table-row">
+          <td is="coral-table-cell">
+           Slide 4
+            <input type="hidden" name="./slideOrder" value="slide4"/>
+          </td>
+          <td is="coral-table-cell">
+            <button is="coral-button" type="button" variant="minimal" icon="dragHandle" coral-table-roworder></button>
+          </td>
+        </tr>
+        <tr is="coral-table-row">
+          <td is="coral-table-cell">
+           Slide 5
+            <input type="hidden" name="./slideOrder" value="slide5"/>
+          </td>
+          <td is="coral-table-cell">
+            <button is="coral-button" type="button" variant="minimal" icon="dragHandle" coral-table-roworder></button>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
