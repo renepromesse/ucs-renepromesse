@@ -4,3 +4,4 @@
     jcr:title="home-hash-tags"
     sling:resourceSuperType="foundation/components/parbase"
     componentGroup="ucs-renepromesse"/>
+    
