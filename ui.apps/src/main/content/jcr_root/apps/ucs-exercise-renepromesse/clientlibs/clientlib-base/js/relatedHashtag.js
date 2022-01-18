@@ -1,6 +1,35 @@
 $(document).ready(function () {
   var windowRelatedHash = $(window).width();
   var dataHashtag;
+  var shuffleAll;
+
+  // shuffle the cards
+  function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+
+  $(document).on('click', '#shuffle', function () {
+    if(shuffleAll === 'true || false'){
+      setSwiperStructure(dataHashtag);
+    }
+
+  });
+  
+
 
   // Hashtag Click
   $(document).on("click", ".relatedHashtag .bar__item", function () {
@@ -10,15 +39,17 @@ $(document).ready(function () {
       $(".relatedHashtag__result").fadeIn();
       var parm = $(this).attr("data-hashtag");
       var max = $(this).attr("data-maxarticle");
+      var shuffleAtt = $(this).attr("data-shuffle");
+      shuffleAll = shuffleAtt;
       getResult(parm, max);
     }
   });
 
   // Close Click
-  $(document).on("click", ".relatedHashtag .close", function () {
+  $(".icon-close").click(function () {
     $(".relatedHashtag__result").fadeOut();
     $(".relatedHashtag .bar__item").removeClass("bar__item--active");
-  });
+  })
 
   //RESIZE MANAGEMENT
   $(window).on("resize", function () {
@@ -70,6 +101,9 @@ $(document).ready(function () {
   }
 
   function setSwiperStructure(data) {
+    if(shuffleAll === 'true || false'){
+      data = shuffle(data);
+    }
     $(".relatedHashtag__result .swiper-slide").remove();
     if (data) {
       $(".result__number .number").text(data.length);
@@ -124,11 +158,11 @@ $(document).ready(function () {
 
           addBg($(window).width());
 
-          lastCard.find(".card__hashtag").text(cardData.tags[0]);
+          lastCard.find(".card__hashtag").text("#" + cardData.hashtag);
 
           lastCard.find(".card__date").text(cardData.date);
 
-          lastCard.find(".card__desc").text(cardData.articleAbstract);
+          lastCard.find(".card__desc").text(cardData.text);
 
           counter = counter + 1;
           if (counter > numberOfSlider) {
@@ -150,12 +184,12 @@ $(document).ready(function () {
     $(".relatedHashtag__result .swiper-slide").remove();
 
     $.ajax({
-      url: `/bin/hashtag?tag=${parm}&max=${max}`,
+      url: `/bin/hashtags?tag=${parm}&max=${max}`,
       type: "GET",
       success: function (res) {
         dataHashtag = res;
       },
-      complete: function () {
+      complete: function () {  
         setSwiperStructure(dataHashtag);
         cardsSwiper();
       },

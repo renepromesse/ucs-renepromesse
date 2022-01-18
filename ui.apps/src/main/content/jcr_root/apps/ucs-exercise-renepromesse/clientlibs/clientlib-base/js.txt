@@ -9,3 +9,4 @@ heroBanner__welcome.js
 moment.min.js
 relatedHashtag.js
 tags.js
+myHashTags.js

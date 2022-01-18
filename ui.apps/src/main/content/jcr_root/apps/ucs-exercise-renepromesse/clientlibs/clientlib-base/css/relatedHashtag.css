@@ -31,6 +31,14 @@
   -ms-flex-align: center;
   align-items: center;
 }
+.shuffle-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.shuffle-container span{
+  padding-left: 4px;
+}
 @media only screen and (max-width: 1024px) {
   .relatedHashtag__bar {
     -webkit-flex-direction: column;

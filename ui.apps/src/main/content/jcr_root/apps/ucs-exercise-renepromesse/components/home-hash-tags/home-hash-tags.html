@@ -1,32 +1,35 @@
  <!-- ******************* START RELATED HASHTAG ******************* -->
-
+ <sly data-sly-test="${!properties.title}">
+   <div>
+     <h3>Edit hashtags </h3>
+   </div>
+ </sly>
  <div class="relatedHashtag container-fixed">
   <div class="relatedHashtag__bar container">
     <div class="bar__title text--subtitle"> ${properties.title}</div>
-    <div class="bar__list">
-      <div data-hashtag="peoplestories" class="bar__item text--body">
-        #PeopleStories
-      </div>
-      <div data-hashtag="makeadifferenceeveryday" class="bar__item text--body">
-        #MakeADifferenceEveryDay
-      </div>
-      <div data-hashtag="talent" class="bar__item text--body">
-        #Talent
-      </div>
-      <div data-hashtag="socialimpactbanking" class="bar__item text--body">
-        #SocialImpactBankings
-      </div>
+    <div class="bar__list" data-sly-use.model="it.codeland.academy.core.models.HashTags">
+      <sly data-sly-list.item="${model.tagsHashMap}">
+        <div data-hashtag="${item.old}" data-maxarticle="${properties.max || 20}" data-shuffle="${properties.shuffle} || false" class="bar__item text--body">
+          #${item.tag}
+        </div>
+      </sly>
     </div>
   </div>
   <div class="relatedHashtag__result container">
     <div class="result__cta">
       <div class="result__number">
         <span class="number text--paragraph-title">0</span>
-        <span class="results text--body">results</span>
+        <span class="results text--body">${properties.results}</span>
+        <sly data-sly-test="${properties.shuffle}">
+          <div class="shuffle-container">
+            <img src="../../dam/ucs-exercise-renepromesse/shuffle.svg" style="width:15px;height:auto" id="shuffle" alt="shuffle icon">
+            <span>${properties.shuffleText}</span> 
+          </div>
+        </sly>
       </div>
       <div class="result__close">
-        <span class="text--label">CHIUDI</span>
-        <span class="icon icon-close"></span>
+        <span class="text--label">${properties.closeButton}</span>
+        <span class="icon icon-close"> </span>
       </div>
     </div>
     <div class="result__cards">

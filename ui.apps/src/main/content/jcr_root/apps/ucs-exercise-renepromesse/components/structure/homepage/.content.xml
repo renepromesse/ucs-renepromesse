@@ -3,6 +3,6 @@
     jcr:primaryType="cq:Component"
     jcr:description="homepage-component"
     jcr:title="homepage-component"
-    sling:resourceSuperType="core/wcm/components/page/v2/page"
+    sling:resourceSuperType="wcm/foundation/components/page"
     componentGroup="homepage"
 />    

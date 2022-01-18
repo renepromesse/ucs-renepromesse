@@ -5,9 +5,9 @@
         <items jcr:primaryType="nt:unstructured">
             <tabs jcr:primaryType="nt:unstructured">
                 <items jcr:primaryType="nt:unstructured">
-                    <article
+                    <basic
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Article"
+                        jcr:title="basic"
                         sling:orderBefore="advanced"
                         sling:resourceType="granite/ui/components/foundation/section">
                         <layout
@@ -24,17 +24,44 @@
                                         jcr:title="Article details"
                                         sling:resourceType="granite/ui/components/foundation/form/fieldset">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <text cq:showOnCreate="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea" fieldLabel="Text" name="./text" required="true"/>
-                                            <image cq:showOnCreate="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Image" name="./image" required="{Boolean}true" rootPath="/content/dam/ucs-exercise-renepromesse" forceSelection="{Boolean}true" emptyText="add a picture of the article" />
-                                            <date cq:showOnCreate="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" name="./date" type="date" required="{Boolean}true"/>
- 
-                                           
+                                            <text 
+                                            cq:showOnCreate="{Boolean}true" 
+                                            jcr:primaryType="nt:unstructured" 
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield" 
+                                            fieldLabel="Title" name="./jcr:title" required="true"/>
+                                            <image 
+                                            cq:showOnCreate="{Boolean}true" 
+                                            jcr:primaryType="nt:unstructured" 
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" 
+                                            fieldLabel="Image" name="./image" required="{Boolean}true" 
+                                            rootPath="/content/dam/ucs-exercise-renepromesse" 
+                                            forceSelection="{Boolean}true" 
+                                            emptyText="add a picture of the article" />
+                                            <date 
+                                            cq:showOnCreate="{Boolean}true" 
+                                            jcr:primaryType="nt:unstructured" 
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" 
+                                            fieldLabel="Date" name="./date" type="date" 
+                                            required="{Boolean}true"/>
+                                            <tags 
+                                            cq:showOnCreate="{Boolean}true" 
+                                            jcr:primaryType="nt:unstructured" 
+                                            sling:resourceType="cq/gui/components/coral/common/form/tagfield" 
+                                            fieldLabel="Tags" 
+                                            multiple="{Boolean}false" name="./tags"
+                                            rootPath="/content/cq:tags/uni-credit" 
+                                            required="{Boolean}true"/>
+                                            <articleText 
+                                            cq:showOnCreate="{Boolean}true" 
+                                            jcr:primaryType="nt:unstructured" 
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea" 
+                                            fieldLabel="Article Text" name="./text" required="true"/>
                                         </items>
                                     </details>
                                 </items>
                             </column>
                         </items>
-                    </article>
+                    </basic>
                 </items>
             </tabs>
         </items>

@@ -3,6 +3,6 @@
     jcr:primaryType="cq:Component"
     jcr:description="article-component"
     jcr:title="article-component"
-    sling:resourceSuperType="core/wcm/components/page/v2/page"
+    sling:resourceSuperType="ucs-exercise-renepromesse/components/structure/homepage"
     componentGroup="articlepage"
-/>    
+/>
