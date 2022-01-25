@@ -1,0 +1,23 @@
+.color--primary {
+    color: #1e5fbe;
+}
+
+.font--normal {
+    font-weight: normal;
+}
+
+.loading {
+    width: 40px;
+    height: 40px;
+    background: url(/apps/ucs-exercise-emile/components/content/csv-import/clientlib-base/gifs/loading.gif);
+    background-size: 100%;
+    border: 2px solid red;;
+}
+
+.loading--show {
+    display: inline-block !important;
+}
+
+.loading--hide {
+    display: none !important;
+}

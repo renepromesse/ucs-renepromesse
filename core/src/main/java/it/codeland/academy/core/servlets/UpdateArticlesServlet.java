@@ -63,11 +63,11 @@ public class UpdateArticlesServlet extends SlingAllMethodsServlet {
 
             ps.CreatePage("/content/dam/ucs-exercise-renepromesse/articles.csv", resolver);
             
-            // pageManager = resolver.adaptTo(PageManager.class);
-            // Page magazine = pageManager.getPage("/content/ucs-renepromesse/magazine/");
+            pageManager = resolver.adaptTo(PageManager.class);
+            Page magazine = pageManager.getPage("/content/ucs-renepromesse/magazine/");
            
-            // Resource magazineContent = magazine.getContentResource();
-            // Node magazineNode = magazineContent.adaptTo(Node.class);
+            Resource magazineContent = magazine.getContentResource();
+            Node magazineNode = magazineContent.adaptTo(Node.class);
 
             // ImportInfo imp = new ImportInfo();
             // imp.total = magazineNode.getProperty("totalArticles").getValue().toString();
